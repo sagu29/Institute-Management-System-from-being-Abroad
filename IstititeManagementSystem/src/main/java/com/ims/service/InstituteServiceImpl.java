@@ -1,11 +1,13 @@
 package com.ims.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ims.entity.Institute;
 import com.ims.exception.InstituteManagementSystemException;
 import com.ims.repository.InstituteRepository;
 
+@Service
 public class InstituteServiceImpl implements InstituteService{
 	
 	  private InstituteRepository instituteRepository;
@@ -19,7 +21,6 @@ public class InstituteServiceImpl implements InstituteService{
 	 
 	 @Override
 	 public Institute registerInstitute(Institute institute) {
-	        // Additional validation logic if needed
 	        return instituteRepository.save(institute);
 	    }
 
